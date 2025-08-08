@@ -127,3 +127,14 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+
+DEBUG = False
+
+# Configuración de archivos estáticos para Gunicorn y WhiteNoise
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Configuración para Gunicorn y tu proyecto
+# Este nombre de archivo 'streaming_manager.wsgi.application' debe ser el mismo que el tuyo.
+WSGI_APPLICATION = 'streaming_manager.wsgi.application'
