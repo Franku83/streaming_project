@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-tu-clave-secre
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['streamingproject-production.up.railway.app']
 if 'RAILWAY_ENVIRONMENT' in os.environ:
     ALLOWED_HOSTS.append(os.environ.get('RAILWAY_STATIC_URL'))
 
